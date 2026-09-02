@@ -73,11 +73,7 @@ features = [
 nav = [
     { "Home" = "index.md" },
     { "Project Instructions" = "project-instructions.md" },
-    { "Your Files" = "your-files.md" },
-    { "Glossary" = "glossary.md" },
-    { "Module" = "module/index.md" },
-    { "Branching" = "module/branching.md" },
-    { "Functions" = "module/functions.md" },
-    { "Operators" = "module/operators.md" },
-    { "Repetition" = "module/repetition.md" },
+    { "Concepts" = "concepts.md" },
+    { "Data Card" = "data-card.md" },
+    { "API" = "api.md" },
 ]

@@ -258,7 +258,7 @@ def main() -> None:
     elif sample_island == "Dream":
         island_message: str = "This penguin is from Dream Island"
     else:
-        island_message: str = "This penguin is from Torgerson Island"
+        island_message: str = "This penguin is from Torgersen Island"
     LOG.info(island_message)
 
     LOG.info(f"Short threshold multiplier: {SHORT_THRESHOLD_MULTIPLIER}")
@@ -326,19 +326,22 @@ def main() -> None:
 
     # Define a path to save the distribution plot.
     # REQUIRED: Use the "docs/images" folder to store generated charts.
-    CHART_PATH = Path("docs/images/measurement-distribution.png")
 
     # Call an imported function that will show a distribution plot
     # Pass in the pandas DataFrame (df) along with the selected measurement column.
     # It will return a matplotlib Axes object representing the distribution plot.
-    ax = show_numeric_distribution(
-        df,
-        column=MEASUREMENT_COLUMN,
-    )
-
-    # call the save_chart() function and pass in the Axes and the path
-    save_chart(ax, CHART_PATH)
-    LOG.info(f"Chart saved successfully at {CHART_PATH}.")
+    for island in df["island"].unique():
+        LOG.info(f"Creating distribution chart for {island} Island.")
+        island_df = df[df["island"] == island]
+        ax = show_numeric_distribution(
+            island_df,
+            column=MEASUREMENT_COLUMN,
+        )
+        ax.set_title(f"Distribution of {MEASUREMENT_COLUMN} - {island} Island")
+        # call the save_chart() function and pass in the Axes and the path
+        island_chart_path = Path(f"docs/images/{island.lower()}-distribution.png")
+        save_chart(ax, island_chart_path)
+        LOG.info(f"Chart saved successfully at {island_chart_path}.")
 
     LOG.info(
         "IMPORTANT: Close chart window to continue by clicking its X or close button."

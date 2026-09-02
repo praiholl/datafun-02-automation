@@ -82,9 +82,13 @@ of the selected numeric measurement.
 
 ![Histogram of the selected measurement](docs/images/measurement-distribution.png)
 
-## Changes made to the file by Holly Praiswater
+## Changes made to the file by Holly Praiswater for Phase 4
 
 20260902 I added in an if, elif, else statement to classify the penguins by the island they were located on. I knew that island was another categorical variable in the data set, so an if, elif, else statement would work well for it, especially since there were 3 islands. I added it in with the sample reading where the code was focusing on the measurement column. I tested with the sample index at 0 to prove it would print the indicated statement, then tested it for a penguin on the other two islands to ensure that each statement was set up correctly.
+
+## Changes made to the file by Holly Praiswater for Phase 5
+
+20260902 I expanded the project by creating a separate histogram for each island. I used a for loop to go through the three islands and divide the penguins by island. I then created and saved a bill length distribution histogram for Biscoe, Dream, and Torgersen Islands. I compared the three distributions to see how bill length differed between the islands.
 
 ## Important Folders and Files
 
@@ -235,7 +239,7 @@ Press `Ctrl c` (both keys together) or `Ctrl+Z` then `Enter` on Windows.
 
 ## Documentation
 
-- [Documentation](https://denisecase.github.io/datafun-02-automation/)
+- [Documentation](https://praiholl.github.io/datafun-02-automation/)
 
 ## Data Card
 

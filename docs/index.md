@@ -25,10 +25,16 @@ to get a project like this running on your machine.
 - [**Data Card**](./data-card.md)
 - [**API**](./api.md)
 
-## Initial Results
+## Bill Length Distribution by Island - 20260902 Changed by Holly Praiswater for Phase 5
 
-After reviewing the dataset, use the code in the **src/datafun**
-folder to create a histogram showing the distribution
-of your chosen numeric measurement.
+I wanted to see the distribution for bill length once we categorized the penguins by island. I created a for loop to divide the penguins by island, then added a new code to give each island its own histogram.
 
-![Histogram of the selected measurement](./images/measurement-distribution.png)
+### Biscoe Island
+![Biscoe Island bill length distribution](./images/biscoe-distribution.png)
+### Dream Island
+![Dream Island bill length distribution](./images/dream-distribution.png)
+### Torgersen Island
+![Torgersen Island bill length distribution](./images/torgersen-distribution.png)
+
+### Observations
+Dream Island was still bimodal like the original graphs. Biscoe Island is the only distribution that is slightly skewed right, but a majority was from 45-50 mm, with a large amount of data being less than 45 mm. Torgersen was the closest to a normal distribution, but there was a gap in bill length around 38 mm, so that was interesting.
