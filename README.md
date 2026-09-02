@@ -82,6 +82,10 @@ of the selected numeric measurement.
 
 ![Histogram of the selected measurement](docs/images/measurement-distribution.png)
 
+## Changes made to the file by Holly Praiswater
+
+20260902 I added in an if, elif, else statement to classify the penguins by the island they were located on. I knew that island was another categorical variable in the data set, so an if, elif, else statement would work well for it, especially since there were 3 islands. I added it in with the sample reading where the code was focusing on the measurement column. I tested with the sample index at 0 to prove it would print the indicated statement, then tested it for a penguin on the other two islands to ensure that each statement was set up correctly.
+
 ## Important Folders and Files
 
 - **data/** - the CSV data file

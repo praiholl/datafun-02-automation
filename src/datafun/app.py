@@ -250,7 +250,16 @@ def main() -> None:
     # so it can be accessed using iloc[1].
     sample_index: int = 0
     sample_reading: float = df[MEASUREMENT_COLUMN].iloc[sample_index]
+    sample_island: str = df["island"].iloc[sample_index]
     LOG.info(f"Sample {MEASUREMENT_COLUMN}: {sample_reading}")
+    LOG.info(f"Sample island: {sample_island}")
+    if sample_island == "Biscoe":
+        island_message: str = "This penguin is from Biscoe Island"
+    elif sample_island == "Dream":
+        island_message: str = "This penguin is from Dream Island"
+    else:
+        island_message: str = "This penguin is from Torgerson Island"
+    LOG.info(island_message)
 
     LOG.info(f"Short threshold multiplier: {SHORT_THRESHOLD_MULTIPLIER}")
     LOG.info(f"Long threshold multiplier:  {LONG_THRESHOLD_MULTIPLIER}")
